@@ -44,22 +44,22 @@ body{
 }
 
 .cover-block {
-  padding-top: 50px;
+  padding-top: 10px;
 }
 
 .profile-link{
-  font-size: 13pt;
+  font-size: 14pt;
 }
 
 .profile-link a {
-  color: white;
+  color: black;
 }
 .profile-link a:hover {
   color: #DDDDDD;
 }
 
 .profile-block {
-    background-color: #fff;
+    background-color: black;
     transition: box-shadow .25s;
     border-radius: 20px;
 }
@@ -69,13 +69,13 @@ body{
 }
 
 .profile-content-block{
-    color: white;
+    color: black;
     padding-top: 10px !important;
 }
 
 .profile-photo{
     border-radius: 125px !important;
-    border-color: white;
+    border-color: black;
     margin: 10px;
 }
 
@@ -98,18 +98,18 @@ body{
 }
 
 .social-photo{
-    -webkit-transition: all 0.25s ease; /* Safari and Chrome */
-    -moz-transition: all 0.25s ease; /* Firefox */
-    -o-transition: all 0.25s ease; /* IE 9 */
-    -ms-transition: all 0.25s ease; /* Opera */
-    transition: all 0.25s ease;
-}
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease; 
+    -o-transition: all 0.25s ease; 
+    -ms-transition: all 0.25s ease; 
+    transition: all 0.25s ease; 
+} 
 .social-photo:hover {
-    -webkit-transform:scale(1.2); /* Safari and Chrome */
-    -moz-transform:scale(1.2); /* Firefox */
-    -ms-transform:scale(1.2); /* IE 9 */
-    -o-transform:scale(1.2); /* Opera */
-     transform:scale(1.2);
+    -webkit-transform:scale(1.2);
+    -moz-transform:scale(1.2); 
+    -ms-transform:scale(1.2);
+    -o-transform:scale(1.2); 
+    transform:scale(1.2); 
 }
 
 
@@ -135,10 +135,11 @@ body{
 
 
 .parallax-container {
-  min-height: 380px;
+  /* min-height: 380px; */
   line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
+  /* height: auto; */
+  height: 320px;
+  /* color: rgba(255,255,255,.9); */
 }
   .parallax-container .section {
     width: 100%;
