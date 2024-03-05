@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Text2Loc: 3D Point Cloud Localization from Natural Language">
+  <meta name="keywords" content="Text2Loc, 3D Localization">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Text2Loc: 3D Point Cloud Localization from Natural Language</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Text2Loc: 3D Point Cloud Localization from Natural Language</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://yan-xia.github.io/">Yan Xia</a><sup>1,2*&dagger;</sup>,</span>
+            <span class="author-block">
+              <a href="">Letian Shi</a><sup>1*</sup>,</span>
+            <span class="author-block">
+              <a href="">Zifeng Ding</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.robots.ox.ac.uk/~joao/">João F. Henriques</a><sup>4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://cvg.cit.tum.de/members/cremers">Daniel Cremers</a><sup>1,2</sup>
+            </span>           
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>TUM</span>
+            <span class="author-block"><sup>2</sup>MCML</span>
+            <span class="author-block"><sup>3</sup>LMU</span>
+            <span class="author-block"><sup>4</sup>VGG, University of Oxford</span>
+          </div>
+
+          
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <img src="static/images/cvpr2024.jpg" alt="cvpr icon" width="180" height="40">
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Camera-ready Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2311.15977"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="#overview_video"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Supp Link. -->
+              <!-- <span class="link-block">
+                <a href="static/pdfs/supp.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Supp</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/Yan-Xia/Text2Loc"
+                class="external-link button is-normal is-rounded is-dark">
+               <span class="icon">
+                   <i class="fab fa-github"></i>
+               </span>
+               <span>Code</span>
+               </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              </span> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline controls width="100%">
+        <source src="static/videos/Text2Loc.mp4" type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <strong>We focus on the relatively-understudied problem of point cloud localization from textual descriptions, to address
+          the “last mile problem”.</strong>
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We tackle the problem of 3D point cloud localization based on a few natural linguistic descriptions and introduce a novel neural network, Text2Loc, that fully interprets the semantic relationship between points and text. 
+            Text2Loc follows a coarse-to-fine localization pipeline: text-submap global place recognition, followed by fine localization.  
+            In global place recognition, relational dynamics among each textual hint are captured in a hierarchical transformer with max-pooling (HTM), whereas a balance between positive and negative pairs is maintained using text-submap contrastive learning. 
+            Moreover, we propose a novel matching-free fine localization method to further refine the location predictions, which completely removes the need for complicated text-instance matching and is lighter, faster, and more accurate than previous methods. 
+            Extensive experiments show that Text2Loc improves the localization accuracy by <strong>up to 2 times</strong> over the state-of-the-art on the KITTI360Pose dataset. We will make the code publicly available.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+<div align="center" style="margin-top:80px;" style="margin-bottom:120px;">
+<img style='height: auto; width: 75%; object-fit: contain' src="static/pdfs/cover.pdf" alt="overview_image">
+</div>  -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <a id="overview_video"></a>
+          <video id="teaser" playsinline controls width="100%">
+            <source src="static/videos/overview_video.mp4" type="video/mp4">
+          </video>
+      </div>
+    </div> -->
+    <!--/ Paper video.
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Method</h2>
+        <!-- <h3 class="title is-4">LEAP Front-end</h3> -->
+        <div class="content has-text-justified">
+          <p>
+            <strong>Text2Loc architecture:</strong> It consists of two tandem modules: Global place recognition and Fine localization. 
+            \textit{Global place recognition.} Given a text-based position description, we first identify a set of coarse candidate locations, that is, "submaps," which potentially contain the target position and serve as the coarse localization of the query. 
+            This is achieved by retrieving the top-k nearest cells from a previously constructed database of submaps using our novel text-to-cell retrieval model. 
+            \textit{Fine localization.} We then refine the center coordinates of the retrieved submaps via our designed matching-free position estimation module, which adjusts the pose to increase accuracy.
+          </p>
+        </div>
+        <img src="./static/pdfs/network.pdf"
+                  class="teaser-fig"
+                  width="99%"
+                  alt="teaser-fig."/>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+      <!-- Exp. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">Qualitative Localization Results</h2>
+          <div class="content has-text-justified">
+            <p>
+              Qualitative localization results on the KITTI360Pose dataset.
+            In global place recognition, the numbers in top3 retrieval submaps
+            represent center distances between retrieved submaps and the ground truth. Green boxes indicate positive submaps containing the target
+            location, while red boxes signify negative submaps. For fine localization, red and black dots represent the ground truth and predicted target
+            locations, with the red number indicating the distance between them.
+            </p>
+          </div>
+          <img src="./static/pdfs/vis.pdf"
+                  class="teaser-fig"
+                  width="99%"
+                  alt="teaser-fig."/>
+        </div>
+      </div>
+      <!--/ Exp. -->
+    </div>
+</section>
+
+  <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{xia2024text2loc,
+      title={Text2Loc: 3D Point Cloud Localization from Natural Language},
+      author={Xia, Yan and Shi, Letian and Ding, Zifeng and Henriques, Jo{\~a}o F and Cremers, Daniel},
+      journal={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+      year={2024}
+    }
+}</code></pre>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div align="center" class="container">
+    <div class="columns is-centered">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This website is borrowed from <a href="https://github.com/3d-moments/3d-moments.github.io">3D Moments website</a>.
+            The background music of demo video is from <a href="https://www.bensound.com">Bensound</a>, under the license code WN48BW44HT95Q6SO.
+          </p>
+          </div>
+      </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
