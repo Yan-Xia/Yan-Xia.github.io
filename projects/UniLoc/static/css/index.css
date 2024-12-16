@@ -133,5 +133,30 @@ body {
   font-size: smaller;
 }
 
+/*
+Custom Style
+*/
+video {
+  display: block;
+  /* width: 50%; */
+  /* float: left; */
+}
+.grid-container {
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto;
+  /* padding: 200px; */
+}
+.grid-item {
+  padding: 20px;
+  text-align: center;
+}
 
+.grid-container video {
+  text-align: center;
+  display: block;
+  justify-content: center;
+  /* width: 50%; */
+}
+/* .
 

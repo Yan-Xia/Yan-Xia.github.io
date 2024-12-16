@@ -21,8 +21,8 @@
     <meta property="og:url" content="https://yan-xia.github.io/projects/UniLoc/"/>
     <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
     <meta property="og:image" content="static/image/your_banner_image.png"/>
-    <meta property="og:image:width" content="1200"/>
-    <meta property="og:image:height" content="630"/>
+    <meta property="og:image:width" content="2766"/>
+    <meta property="og:image:height" content="770"/>
 
     <!-- Keywords for your paper to be indexed by-->
     <meta name="keywords" content="UniLoc, Place Recognition">
@@ -160,11 +160,25 @@
 </section>
 </header>
 
-<main>
-    <div class="container">
+<!-- <main> -->
+    <!-- <div class="container"> -->
+
+        <section class="hero teaser">
+            <div class="container is-max-desktop">
+                <div class="hero-body">
+                <video id="teaser" autoplay muted loop playsinline controls width="100%">
+                  <source src="static/videos/demo2_resized.mp4" type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered">
+                  <strong>We present UniLoc, a solution designed for city-scale place recognition using any one of three modalities: text, image, or
+                    point cloud.</strong>
+                </h2>
+                </div>
+            </div>
+          </section>
 
         <section class="gallery">
-            <!-- <h2>Demo</h2> -->
+            <h2>Localization results on the KITTI-360 dataset</h2>
             <!--            <video controls width="500" height="300">-->
             <!--                <source src="static/videos/Text_to_Image.mp4" type="video/mp4">-->
             <!--                Your browser does not support the video tag.-->
@@ -173,42 +187,86 @@
             <!--                <source src="static/videos/Text_to_Image_resized.mp4" type="video/mp4">-->
             <!--            </video>-->
 
-            <video id="video7" autoplay muted loop playsinline controls width="950" height="570">
+             <!-- <video id="video7" autoplay muted loop playsinline controls width="950" height="470">
                 <source src="static/videos/demo2_resized.mp4" type="video/mp4">
-            </video>
+            </video> -->
 
-            <div class="video-container is-max-desktop">
-                <video id="video1" autoplay muted loop playsinline controls width="544" height="327">
+             <div class="video-container is-max-desktop">
+                <video id="video1" autoplay muted loop playsinline controls width="444" height="327">
                     <source src="static/videos/Text_to_Image_resized.mp4" type="video/mp4">
                 </video>
 
-                <video id="video2" autoplay muted loop playsinline controls width="544" height="327">
+                <video id="video2" autoplay muted loop playsinline controls width="444" height="327">
                     <source src="static/videos/Text_to_LiDAR_resized.mp4" type="video/mp4">
                 </video>
             </div>
 
             <div class="video-container">
-                <video id="video3" autoplay muted loop playsinline controls width="544" height="327">
+                <video id="video3" autoplay muted loop playsinline controls width="444" height="327">
                     <source src="static/videos/Image_to_LiDAR_resized.mp4" type="video/mp4">
                 </video>
 
-                <video id="video4" autoplay muted loop playsinline controls width="544" height="327">
+                <video id="video4" autoplay muted loop playsinline controls width="444" height="327">
                     <source src="static/videos/LiDAR_to_Image_resized.mp4" type="video/mp4">
                 </video>
             </div>
 
             <div class="video-container">
-                <video id="video5" autoplay muted loop playsinline controls width="544" height="327">
+                <video id="video5" autoplay muted loop playsinline controls width="444" height="327">
                     <source src="static/videos/Image_to_Image_resized.mp4" type="video/mp4">
                 </video>
 
-                <video id="video6" autoplay muted loop playsinline controls width="544" height="327">
+                <video id="video6" autoplay muted loop playsinline controls width="444" height="327">
                     <source src="static/videos/LiDAR_to_LiDAR_resized.mp4" type="video/mp4">
                 </video>
             </div>
 
-
         </section>
+
+        <!-- <section class="hero teaser">
+            <div class="container is-max-desktop">
+            <div class="hero-body">
+            <div class="grid-container">
+              <div class="grid-item">
+                <video poster="" id="tree" autoplay controls muted loop>
+                  <source src="static/videos/Text_to_Image_resized.mp4"
+                  type="video/mp4">
+                  </video>
+              </div>
+              <div class="grid-item">
+                <video poster="" id="tree" autoplay controls muted loop>
+                  <source src="static/videos/Text_to_LiDAR_resized.mp4"
+                  type="video/mp4">
+                </video>
+              </div>
+              <div class="grid-item">
+                <video poster="" id="tree" autoplay controls muted loop>
+                  <source src="static/videos/Image_to_LiDAR_resized.mp4"
+                  type="video/mp4">
+                </video>
+              </div>  
+              <div class="grid-item">
+                <video poster="" id="tree" autoplay controls muted loop>
+                  <source src="static/videos/LiDAR_to_Image_resized.mp4"
+                  type="video/mp4">
+                </video>
+              </div>
+              <div class="grid-item">
+                <video poster="" id="tree" autoplay controls muted loop>
+                  <source src="static/videos/Image_to_Image_resized.mp4"
+                  type="video/mp4">
+                </video>
+              </div>
+              <div class="grid-item">
+                <video poster="" id="tree" autoplay controls muted loop>
+                  <source src="static/videos//LiDAR_to_LiDAR_resized.mp4"
+                  type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          </div>
+          </section> -->
 
         <section class="abstract-section">
             <h2 style="text-align: center;">Abstract</h2>
