@@ -20,7 +20,7 @@ body {
 
 .teaser .hero-body {
   padding-top: 0;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
 }
 
 .teaser {
@@ -123,6 +123,7 @@ body {
 
 .results-carousel video {
   margin: 0;
+  /* padding: 0; */
 }
 
 .slider-pagination .slider-page {
